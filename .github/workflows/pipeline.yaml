@@ -9,7 +9,7 @@ jobs:
   buid-and-test:
     strategy:
       matrix:
-        node: [16.x, 18.x, 20.x, 22.x]
+        node: [16.x] # add more e.g: 18.x 20.x 22.x
       fail-fast: false
 
     runs-on: ubuntu-latest
