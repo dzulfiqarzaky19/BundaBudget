@@ -1,0 +1,17 @@
+{
+  "name": "bundabudget",
+  "version": "1.0.0",
+  "description": "NEW PROJECT FOR BUDGETING APP",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-personal:dzulfiqarzaky19/BundaBudget.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
