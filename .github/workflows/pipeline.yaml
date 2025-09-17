@@ -2,12 +2,16 @@ name: Ci Pipelines
 
 on:
   push:
-    branches:
-      - main
-      - dev
+    paths-ignore:
+      - "**/*.md"
 
 jobs:
-  buid:
+  buid-and-test:
+    strategy:
+      matrix:
+        node: [16.x, 18.x, 20.x, 22.x]
+      fail-fast: false
+
     runs-on: ubuntu-latest
 
     steps:
@@ -16,8 +20,9 @@ jobs:
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
+
         with:
-          node-version: 22.x
+          node-version: 16.x
 
       - name: Install dependencies
         run: npm install
